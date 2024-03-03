@@ -302,4 +302,4 @@ document.getElementById('search-bar').addEventListener('input', function() {
 
 // functional with search bar, family list, buttons
 // -----------------------------------------------------------------------------------------------------
-
+})}
