@@ -15,7 +15,7 @@
 
 
 
-# ![font](assets\GoTfont.png)
+# Game of Thrones Glossary
 
 ###  Your one stop shop for GoT character lore
 
