@@ -1,9 +1,9 @@
-const api1 = "http://localhost:3000/";
-const charAPI = "http://localhost:3000/gotChar";
+const api1 = "https://json-server-scmh.onrender.com/";
+const charAPI = "https://json-server-scmh.onrender.com/gotChar";
 let characters;
 
 // Fetch the JSON data
-fetch('http://localhost:3000/gotChar')
+fetch('https://json-server-scmh.onrender.com/gotChar')
   .then(response => response.json())
   .then(data => {
     characters = data; // characters are stored in gotChar array

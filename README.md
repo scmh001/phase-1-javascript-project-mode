@@ -32,22 +32,27 @@ As a user, I can:
 ## Stretch Deliverables
 * User is able to select through GoT soundtracks
 * User can select through families via keydown event to move through different families without having to use dropdown.
+* User is able to view top quotes from each character.
 
+## Framework Example - db.json
+![db](assets\dbimg.png)
 ## Wireframe
-![wireframe](planning\Picture2.png)
+![wireframe](assets\wireframev2.png)
 
 
 ## Trello
- ![trello](planning\trello1.png)
+ ![trello](assets\trello1.png)
  * https://trello.com/b/502vEAXP/flatiron-phase-1-group-project
 ## Endpoint
 
 * https://thronesapi.com/
 * https://github.com/shevabam/game-of-thrones-quotes-api
+* https://json-server-scmh.onrender.com/
 
 ## Collaborators
-
 Shukri Hussein ◘ Kuk Hoon Ryou ◘ Michael DiPasquale
+
+scmh001        ◘ KukHoonRyou   ◘ mdipasqu13
 
 
 

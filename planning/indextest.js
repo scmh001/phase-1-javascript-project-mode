@@ -47,8 +47,8 @@ searchInput.addEventListener('input', (event) => {
 
 // ------------------------------------------------------------------------------------------------------------
 
-const api1 = "http://localhost:3000/";
-const charAPI = "http://localhost:3000/gotChar";
+/*const api1 = "http://localhost:3000/";
+const charAPI = "http://localhost:3000/gotChar";*/
 
 // Fetch the JSON data
 fetch('./db.json')
@@ -106,8 +106,8 @@ fetch('./db.json')
 
   // ------------------------------------------------------------------------------------------------------------
 
-  const api1 = "http://localhost:3000/";
-const charAPI = "http://localhost:3000/gotChar";
+/*const api1 = "http://localhost:3000/";
+const charAPI = "http://localhost:3000/gotChar";*/
 let characters;
 
 // Fetch the JSON data
