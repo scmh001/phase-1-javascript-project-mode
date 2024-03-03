@@ -1,0 +1,12 @@
+/* Styling for additional information details */
+.character-card div {
+    margin-top: 10px; /* Add space between elements */
+    padding: 10px; /* Padding for additional information */
+    background-color: #f9f9f9; /* Light gray background color */
+    display: none; /* Initially hide additional information */
+  }
+  
+  /* Positioning for More Info button */
+  .character-card {
+    position: relative;
+  }

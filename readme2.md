@@ -15,26 +15,28 @@
 
 
 
-# Game of Thrones Glossary
+# ![font](assets\GoTfont.png)
 
-###  Your one stop shop for GOT character lore
+###  Your one stop shop for GoT character lore
 
 ## User Stories
-* User allowed to filter Game of Thrones characters to display on page.
-* User allowed to search specific character and have character information displayed on page.
-* User allowed to filter by "house" name and have list of house members returned
+User is able to filer Game of Thrones character by family house, gives user list and description of each member of specific house. User is able to individualy search for a specific character and is returned charcter description detail upon clicking "More Info" button.
 
 
 ## Deliverables
 As a user, I can:
-* placeHolder
+* Select character by specific family, displaying all family members
+* Individual character look-up
+* User can select through families via keydown event to move through different families without having to use dropdown.
 
-## Bonus Deliverables
-* Use arrow key to move through characters
+## Stretch Deliverables
+* User is able to select through GoT soundtracks
+* User can select through families via keydown event to move through different families without having to use dropdown.
 
 ## Wireframe
 ![wireframe](planning/image.png)
 
+* https://trello.com/b/502vEAXP/flatiron-phase-1-group-project
 ## Endpoint
 
 * https://thronesapi.com/

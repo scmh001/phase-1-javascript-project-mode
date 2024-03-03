@@ -7,7 +7,7 @@
     "fullName": "Daenerys Targaryen",
     "title": "Mother of Dragons",
     "family": "House Targaryen",
-    "image": "daenerys.jpg",
+    "image": "assets\\daenerys.jpg",
     "imageUrl": "https://thronesapi.com/assets/images/daenerys.jpg"
     },
     {
@@ -17,7 +17,7 @@
     "fullName": "Samwell Tarly",
     "title": "Maester",
     "family": "House Tarly",
-    "image": "sam.jpg",
+    "image": "assets\\sam.jpg",
     "imageUrl": "https://thronesapi.com/assets/images/sam.jpg"
     },
     {
