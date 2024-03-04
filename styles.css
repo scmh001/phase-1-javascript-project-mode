@@ -15,7 +15,7 @@ header {
   padding: 0.5rem;
   width: 100%;
   color: white;
-  background-color: black;
+  background-color: rgb(49, 49, 49);
 }
 /* aligned search bar with header, brought z-index to 1 so that screen will scroll beneath header and search bar */
 #search-bar {
@@ -85,14 +85,21 @@ width: 90%; /* Adjust based on your preference */
 }
 
 .character-card {
-flex: 0 1 200px; /* Each card can grow to fill space, but starts at 200px */
-display: flex;
-flex-direction: column;
-align-items: center; /* Align items in the center of the card */
-padding: 10px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* adds shadow for depth */
-background-color: #fff; /* Card background color */
-border-radius: 5px; /* rounds the corners of the cards */
+  flex: 0 1 200px; /* Start at 200px but allow flexing */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items */
+  padding: 20px; /* Increased padding for better spacing */
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* Softer shadow for depth */
+  background-color: #fff; /* Card background color */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+  border: 1px solid #e0e0e0; /* Subtle border for definition */
+}
+
+.character-card:hover {
+  transform: translateY(-5px); /* Slight raise effect on hover */
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2); /* Enhanced shadow on hover for depth */
 }
 
 #results-container {
