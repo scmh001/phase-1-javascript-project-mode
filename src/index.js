@@ -105,7 +105,6 @@ document.getElementById('search-button').addEventListener('click', function() {
       return fullName.includes(searchInput);
   });
   displayCharacters(filteredCharacters);
-<<<<<<< HEAD
 });
  // Event listener for search button click //~~~~~need to de-bug search bar
      document.getElementById('search-button').addEventListener('click', function() {
@@ -121,19 +120,6 @@ document.getElementById('search-button').addEventListener('click', function() {
   .catch(error => console.error('Error fetching data:', error));
 
     
-=======
-
-
-})
-
-.catch(error => console.error('Error fetching data:', error));
- 
-})
-  
-
-     
-
->>>>>>> 527b21b24e8d4d8e51fc3457185b8ad763cc97f3
   
 
 
