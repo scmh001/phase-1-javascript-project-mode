@@ -44,6 +44,16 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
 
       // Display filtered characters in results container
       displayCharacters(filteredCharacters);
+      switch (selectedFamily) {
+        case 'House Stark':
+            document.body.style.backgroundImage = 'url("assets/House Logos/House Stark Logo.jpg")';
+            break;
+        case 'House Greyjoy':
+            document.body.style.backgroundImage = 'url("assets/House Logos/House Greyjoy.jpg")';
+            break;
+        default:
+            document.body.style.backgroundImage = 'url("assets/background.jpg")';
+    }
     });
 
 // Function to display characters in results container with additional information
