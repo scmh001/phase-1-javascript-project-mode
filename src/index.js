@@ -45,6 +45,7 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
 
       // Display filtered characters in results container
       displayCharacters(filteredCharacters);
+     
       switch (selectedFamily) {
         case 'House Stark':
             document.body.style.backgroundImage = 'url("assets/House Logos/House Stark Logo.jpg")';
