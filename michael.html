@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game of Thrones Glossary</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>HTML5 Audio Player</title>
+    <style>
+        #playlist{
+            list-style: none;
+        }
+        #playlist li a{
+            color: white;
+            text-decoration: none;
+
+        }
+        #playlist .current-song a{
+            color: blue;
+        }
+    </style>
+
+</head>
+<body style= "background-image: url('assets/background.jpg');">
+
+
+
+    <header>
+        <h3>Game of Thrones Glossary</h3>
+        <!-- Move the select dropdown to the navigation bar -->
+        <select id="family-filter">
+            <option value="">All Families</option>
+            <!-- Populate this dropdown dynamically with unique family names -->
+        </select>
+    </header>
+
+    <!-- Search bar and button -->
+    <input type="text" id="search-bar" placeholder="Search for a character...">
+    <button id="search-button">Find Character</button>
+    
+    <div id="results-container"></div>
+
+    <!-- <div id="contentframe" style="position:relative; top: 160px; left: 500px;">
+    <iframe width="600" height="300" src="https://www.youtube.com/embed/R1i-HnShOcE" title="Game Of Thrones Music No Copyright | Game Of Thrones Royalty Free Music | No Attribution Required" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div> -->
+    
+    <script defer src="src\index.js"></script>
+
+    <audio src= "" >controls id= "audioPlayer"</audio>
+            Sorry, your browser does not support HTML5!
+    <ul id="playlist">
+        <li class = "current-song"><a href="opening-theme.mp3">Opening Theme</a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+    <script src="https://archive.org/details/tvtunes_20712">
+    </script>
+    <script src="audioPlayer.js">
+    </script>
+    <script>
+        audioPlayer();
+    </script>
+    
+</body>
+</html>
+
