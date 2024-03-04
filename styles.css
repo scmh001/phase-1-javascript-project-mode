@@ -38,11 +38,18 @@ header h3 {
   top: 60px; /* Distance from the bottom */
   right: 20px; /* Distance from the left */
   z-index: 2; /* Ensure it's above other content */
+ 
 }
 
 audio {
   width: 25%; /* Full width of its container */
   outline: none; /* Remove focus outline */
+  padding: 1em 2em;
+  border-radius: 50%;
+  border-width: thin;
+  background-color: black;
+  cursor: pointer; /* Add cursor pointer on hover */
+  opacity: inherit;
 }
 
 
@@ -81,6 +88,22 @@ transition: all 0.3s ease; /*smooth transition for hover effects */
   background-color: #e64a19;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
+}
+#search-family {
+  z-index: 3;
+}
+#search-family {
+  position: fixed;
+  z-index: 1000;
+  left: 25px; /* Change the left value to 0 to align it to the left */
+  top: 100px;
+  width: 15%;
+  padding: 10px;
+  background-color: rgba(255, 217, 0, 0.8);
+  color: black;
+  border-bottom: 2px solid #ffd900;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 #results-container {

@@ -116,22 +116,39 @@ document.getElementById('search-button').addEventListener('click', function() {
       return fullName.includes(searchInput);
   });
   displayCharacters(filteredCharacters);
-});
- // Event listener for search button click //~~~~~need to de-bug search bar
-     document.getElementById('search-button').addEventListener('click', function() {
-      console.log("i've been pressed")
-      const searchInput = document.getElementById('search-bar').value.toLowerCase();
-      const filteredCharacters = characters.filter(character => {
-          const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
-          return fullName.includes(searchInput);
-      });
-      displayCharacters(filteredCharacters);
+})
+  }) 
+
+  // Event listener for search input of specific families
+
+
+let gotCHar = []; // This will hold the fetched data
+
+// Fetch the data from db.json (adjust the path as necessary)
+fetch('https://json-server-scmh.onrender.com/gotChar')
+  .then(response => response.json())
+  .then(data => {
+    familys = data; // Assuming the data is an array of family members
   });
-  })
-  .catch(error => console.error('Error fetching data:', error));
 
-  
+document.getElementById('search-family').addEventListener('input', function() {
+  const searchInput = this.value.toLowerCase();
+  const filteredFamilyMembers = familys.filter(member => 
+    member.family.toLowerCase().includes(searchInput)
+  );
+  displayFamilyMembers(filteredFamilyMembers);
+});
 
+function displayFamilyMembers(members) {
+  const container = document.getElementById('results-container');
+  container.innerHTML = ''; // Clear previous results
+
+  members.forEach(member => {
+    const memberElement = document.createElement('div');
+    memberElement.textContent = `${member.name} from ${member.family}`;
+    container.appendChild(memberElement);
+  });
+}
 
 
 
