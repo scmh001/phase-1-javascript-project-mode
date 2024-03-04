@@ -120,3 +120,11 @@ height: auto; /* Adjust the height automatically to maintain aspect ratio */
 border-top-left-radius: 5px; /* rounds the top left corner of the image */
 border-top-right-radius: 5px; /* rounds the top right corner of the image */
 }
+
+/* ---------------------------------------------------------------------------------- */
+
+#family-filter {
+  position: relative; /* Or 'absolute', 'fixed', 'sticky' depending on your layout needs */
+  z-index: 1000; /* High value to ensure it's on top */
+  
+}

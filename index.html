@@ -6,14 +6,22 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
 </head>
-<body style= "background-image: url('assets/background.jpg');">
+<style>
+    body {
+        background-image: url("assets/background.jpg"); 
+            background-size: cover; 
+            background-position: center;
+        }
+</style>
+<body>
     
    
 
     <header>
         <h3>Game of Thrones Glossary</h3>
-        <!-- Move the select dropdown to the navigation bar -->
+       
         <select id="family-filter">
+            
             <option value="">All Families</option>
             <!-- Populate this dropdown dynamically with unique family names -->
         </select>

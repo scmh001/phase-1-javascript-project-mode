@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
 body {
   padding: 1rem;
   background-color: #4e4444;
@@ -11,18 +13,33 @@ body {
 header {
   text-align: center;
   z-index: 1;
+  top: 20px;
   position: fixed;
   padding: 0.5rem;
   width: 100%;
   color: white;
   background-color: rgb(49, 49, 49);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+header h3 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 2em; /* Adjust size as needed */
+}
+#family-filter {
+  position: relative; /* Or 'absolute', 'fixed', 'sticky' depending on your layout needs */
+  z-index: 1000; /* High value to ensure it's on top */
+  padding: 0.5em 1em;
+  color: black;
+  background-color: goldenrod;
+}
+
+
 /* aligned search bar with header, brought z-index to 1 so that screen will scroll beneath header and search bar */
 #search-bar {
   position: fixed;
   z-index: 1000;
   left: 25px; /* Change the left value to 0 to align it to the left */
-  top: 20;
+  top: 40px;
   width: 15%;
   padding: 10px;
   background-color: rgba(255, 217, 0, 0.8);
@@ -36,7 +53,7 @@ header {
 z-index: 1;
 position: fixed;
 left: 320px;
-top: 20;
+top: 45px;
 padding: 10px 20px;
 background-color: goldenrod;
 color: black; /* text color */
