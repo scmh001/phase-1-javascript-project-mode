@@ -35,14 +35,14 @@ User is able to filter Game of Thrones character by family house, gives user lis
 * '.map' will be used for mapping a new array that contains only the family names of each character.
 
 ## Framework Example - db.json
-![db](assets\dbimg.png)
+<img src="assets\dbimg.png">
 
 ## Wireframe Inital
 <img src="assets\wireframev2.png">
 
 
 ## Trello
- ![trello](assets\trello1.png)
+ <img src="assets\trello2.png">
  * https://trello.com/b/502vEAXP/flatiron-phase-1-group-project
  
 ## Endpoint
