@@ -13,7 +13,7 @@ User is able to filter Game of Thrones character by family house, gives user lis
 
 
 ## Deliverables
-As a user, I can:
+> As a user, I can:
 * Select character by specific family, displaying all family members
 * Individual character look-up with character details
 
