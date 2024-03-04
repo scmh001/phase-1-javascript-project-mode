@@ -185,3 +185,22 @@ You can consult the [json-server docs][] for more information.
 [json-server]: https://www.npmjs.com/package/json-server
 [event-listeners]: https://developer.mozilla.org/en-US/docs/Web/Events
 [APIs]:  https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/
+
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- project info.. -->
+
+<!-- loremipsum.io
+
+(Figma.com for wire framing or mocking)
+
+--style guides
+
+--user story example
+
+--seed data / example data 
+    *atleast 3 example entries
+    *include data type
+
+--kanban board: trello (via atlassian) -->
