@@ -65,8 +65,7 @@ function displayCharacters(characters) {
       infoDetails.innerHTML = `
           <p>Full Name: ${character.fullName}</p>
           <p>Title: ${character.title}</p>
-          <p>Family: ${character.family}
-      `;
+          <p>Family: ${character.family} `;
 
       // Toggle display of additional information when clicking "More Info"
       moreInfo.addEventListener('click', function() {
@@ -98,11 +97,11 @@ document.getElementById('search-bar').addEventListener('input', function() {
 
      // Event listener for search button click //need to de-bug search bar
      document.getElementById('search-button').addEventListener('click', function() {
+      console.log("i've been pressed")
       const searchInput = document.getElementById('search-bar').value.toLowerCase();
       const filteredCharacters = characters.filter(character => {
           const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
           return fullName.includes(searchInput);
-          console.log("i've been pressed")
       });
       displayCharacters(filteredCharacters);
   });
