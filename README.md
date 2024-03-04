@@ -38,7 +38,7 @@ User is able to filter Game of Thrones character by family house, gives user lis
 ![db](assets\dbimg.png)
 
 ## Wireframe Inital
-![wireframe](assets\wireframev2.png)
+<img src="assets\wireframev2.png">
 
 
 ## Trello
