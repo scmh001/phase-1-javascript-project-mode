@@ -1,5 +1,6 @@
 const api1 = "https://json-server-scmh.onrender.com/";
 const charAPI = "https://json-server-scmh.onrender.com/gotChar";
+
 let characters;
 
 // Fetch the JSON data
@@ -97,6 +98,22 @@ document.getElementById('search-bar').addEventListener('input', function() {
   })
   .catch(error => console.error('Error fetching data:', error));
 
+<<<<<<< HEAD
  document.body.style.backgroundImage = "/Users/theryous/Development/code/phase-1/phase-1-javascript-project-mode/phase-1-javascript-project-mode/assets/background.jpg"; 
+=======
+     // Event listener for search button click //need to de-bug search bar
+     document.getElementById('search-button').addEventListener('click', function() {
+      const searchInput = document.getElementById('search-bar').value.toLowerCase();
+      const filteredCharacters = characters.filter(character => {
+          const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
+          return fullName.includes(searchInput);
+          console.log("i've been pressed")
+      });
+      displayCharacters(filteredCharacters);
+  });
+  
+
+
+>>>>>>> 465305d29916f86dc23f1a5e152e4b42391c4b3e
 
 
