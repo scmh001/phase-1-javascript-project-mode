@@ -271,7 +271,7 @@ function displayCharacters(characters) {
       image.alt = `${character.firstName} ${character.lastName}`;
 
       // Create a button to show more details
-      const detailsButton = document.createElement('button');
+      const detailsButton = document.createElement('infoButton');
       detailsButton.textContent = 'Show Details';
       detailsButton.onclick = function() {
           alert(`ID: ${character.id}\nFull Name: ${character.fullName}\nTitle: ${character.title}\nFamily: ${character.family}`);
