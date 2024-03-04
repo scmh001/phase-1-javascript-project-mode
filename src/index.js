@@ -105,6 +105,23 @@ document.getElementById('search-button').addEventListener('click', function() {
       return fullName.includes(searchInput);
   });
   displayCharacters(filteredCharacters);
+<<<<<<< HEAD
+});
+ // Event listener for search button click //~~~~~need to de-bug search bar
+     document.getElementById('search-button').addEventListener('click', function() {
+      console.log("i've been pressed")
+      const searchInput = document.getElementById('search-bar').value.toLowerCase();
+      const filteredCharacters = characters.filter(character => {
+          const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
+          return fullName.includes(searchInput);
+      });
+      displayCharacters(filteredCharacters);
+  });
+  })
+  .catch(error => console.error('Error fetching data:', error));
+
+    
+=======
 
 
 })
@@ -116,6 +133,7 @@ document.getElementById('search-button').addEventListener('click', function() {
 
      
 
+>>>>>>> 527b21b24e8d4d8e51fc3457185b8ad763cc97f3
   
 
 
