@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Game of Thrones Glossary</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>HTML5 Audio Player</title>
+    <link rel="stylesheet" type="text/css" href="michael.css" />
+    <div>HTML5 Audio Player</div>
+
+    <!-- song names should appear white when not selected, blue when current song is selected -->
     <style>
         #playlist{
             list-style: none;
@@ -44,16 +46,20 @@
     </div> -->
     
     <script defer src="src\index.js"></script>
-
+    <!-- added audio player user can engage with -->
+    <div id="audioPlayerContainer">
     <audio src= "" >controls id= "audioPlayer"</audio>
             Sorry, your browser does not support HTML5!
+            </div> 
+    <!-- playlist of songs sourced -->
     <ul id="playlist">
         <li class = "current-song"><a href="opening-theme.mp3">Opening Theme</a></li>
         <li><a href=""></a></li>
         <li><a href=""></a></li>
     </ul>
-    <script src="https://archive.org/details/tvtunes_20712">
+    <script src="assets/GoTMainTheme.mp3">
     </script>
+    <!-- moved audioPlayer() code to different folder, sourcing it here -->
     <script src="audioPlayer.js">
     </script>
     <script>
