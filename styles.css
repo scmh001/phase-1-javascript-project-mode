@@ -7,9 +7,6 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-image: /Users/theryous/Development/code/phase-1/phase-1-javascript-project-mode/phase-1-javascript-project-mode/assets/background.jpg 
-    background-size: cover; /* 배경 이미지를 창에 맞게 조정 */
-    background-position: center; /* 배경 이미지를 가운데 정렬 */  
   }
 
 header {
