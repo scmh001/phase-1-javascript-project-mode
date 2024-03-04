@@ -104,7 +104,11 @@ document.getElementById('search-bar').addEventListener('input', function() {
   });
   displayCharacters(filteredCharacters);
 });
- // Event listener for search button click //~~~~~need to de-bug search bar
+
+  })
+  .catch(error => console.error('Error fetching data:', error));
+
+     // Event listener for search button click //need to de-bug search bar
      document.getElementById('search-button').addEventListener('click', function() {
       console.log("i've been pressed")
       const searchInput = document.getElementById('search-bar').value.toLowerCase();
@@ -114,10 +118,6 @@ document.getElementById('search-bar').addEventListener('input', function() {
       });
       displayCharacters(filteredCharacters);
   });
-  })
-  .catch(error => console.error('Error fetching data:', error));
-
-    
   
 
 
