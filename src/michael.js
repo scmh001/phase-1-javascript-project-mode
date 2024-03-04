@@ -82,8 +82,8 @@ function displayCharacters(characters) {
       resultsContainer.appendChild(card);
   });
 }
-// Moved Event listener for search button inside of fetch
-//Deleted Event listener for search input. Search button should now work alone. 
+// -------Moved Event listener for search button inside of fetch-----
+//--------Deleted Event listener for search input. Search button should now work alone.
 document.getElementById('search-button').addEventListener('click', function() {
     console.log("i've been pressed")
     const searchInput = document.getElementById('search-bar').value.toLowerCase();

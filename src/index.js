@@ -93,16 +93,19 @@ function displayCharacters(characters) {
       card.appendChild(infoDetails);
 
       resultsContainer.appendChild(card);
+      
   });
 }
-// Event listener for search input
-document.getElementById('search-bar').addEventListener('input', function() {
-  const searchInput = this.value.toLowerCase();
+// event listener for search button 'click'
+document.getElementById('search-button').addEventListener('click', function() {
+  console.log("i've been pressed")
+  const searchInput = document.getElementById('search-bar').value.toLowerCase();
   const filteredCharacters = characters.filter(character => {
       const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
       return fullName.includes(searchInput);
   });
   displayCharacters(filteredCharacters);
+<<<<<<< HEAD
 });
  // Event listener for search button click //~~~~~need to de-bug search bar
      document.getElementById('search-button').addEventListener('click', function() {
@@ -118,6 +121,19 @@ document.getElementById('search-bar').addEventListener('input', function() {
   .catch(error => console.error('Error fetching data:', error));
 
     
+=======
+
+
+})
+
+.catch(error => console.error('Error fetching data:', error));
+ 
+})
+  
+
+     
+
+>>>>>>> 527b21b24e8d4d8e51fc3457185b8ad763cc97f3
   
 
 
