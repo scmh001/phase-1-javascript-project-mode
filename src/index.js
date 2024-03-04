@@ -45,15 +45,43 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
 
       // Display filtered characters in results container
       displayCharacters(filteredCharacters);
+     
       switch (selectedFamily) {
         case 'House Stark':
             document.body.style.backgroundImage = 'url("assets/House Logos/House Stark Logo.jpg")';
             break;
+        case 'House Targaryen':
+            document.body.style.backgroundImage = 'url("assets/House Logos/House Targaryen.jpg")';
+            break;    
         case 'House Greyjoy':
             document.body.style.backgroundImage = 'url("assets/House Logos/House Greyjoy.jpg")';
             break;
+        case 'House Tarly':
+            document.body.style.backgroundImage = 'url("assets/House Logos/House Tarly.jpeg")';
+            break;
+        case 'House Baratheon':
+            document.body.style.backgroundImage = 'url("assets/House Logos/Baratheon.webp")';
+            break;
+        case 'House Lannister':
+            document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
+            break;
+        case 'House Lanister':
+            document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
+            break;
+        case 'House Clegane':
+            document.body.style.backgroundImage = 'url("assets/House Logos/House Clegane.jpeg")';
+            break;
+        case 'House Baelish':
+            document.body.style.backgroundImage = 'url("assets/House Logos/House Baelish.jpeg")';
+            break;
+        case 'House Seaworth':
+            document.body.style.backgroundImage = 'url("assets/House Logos/House Seaworth.jpeg")';
+            break;
+        case 'House Tyrell':
+            document.body.style.backgroundImage = 'url("assets/House Logos/House Tyrell.jpg")';
+            break;
         default:
-            document.body.style.backgroundImage = 'url("assets/background.jpg")';
+            document.body.style.backgroundImage = 'url("assets/House Logos/ETC Family.jpg")';
     }
     });
 
