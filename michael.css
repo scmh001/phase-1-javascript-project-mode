@@ -1,88 +1,43 @@
 
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
-
 body {
-<<<<<<< HEAD
     padding: 1rem;
     background-color: #4e4444;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
   }
-=======
-  padding: 1rem;
-  background-color: #4e4444;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
->>>>>>> be93e8e174e13f7cc15a30da453f02f90974a6bc
 
 header {
-  text-align: center;
-  z-index: 1;
-  top: 20px;
-  position: fixed;
-  padding: 0.5rem;
-  width: 100%;
-  color: white;
-  background-color: rgb(49, 49, 49);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-header h3 {
-  font-family: 'MedievalSharp', cursive;
-  font-size: 2em; /* Adjust size as needed */
-}
-#family-filter {
-  position: relative; /* Or 'absolute', 'fixed', 'sticky' depending on your layout needs */
-  z-index: 1000; /* High value to ensure it's on top */
-  padding: 0.5em 1em;
-  color: black;
-  background-color: goldenrod;
-}
+    text-align: center;
+    z-index: 1;
+    position: fixed;
+    padding: 0.5rem;
+    width: 100%;
+    color: white;
+    background-color: black;
+  }
 
-
-/* aligned search bar with header, brought z-index to 1 so that screen will scroll beneath header and search bar */
 #search-bar {
   position: fixed;
-  z-index: 1000;
+  z-index: 1;
   left: 25px; /* Change the left value to 0 to align it to the left */
-  top: 40px;
+  top: 20;
   width: 15%;
-  padding: 10px;
-  background-color: rgba(255, 217, 0, 0.8);
-  color: black;
-  border-bottom: 2px solid #ffd900;
-  font-size: 16px;
-  transition: all 0.3s ease;
+  background-color: rgba(255, 217, 0, 0.493);
+  color: rgb(15, 1, 1);
 }
 
 #search-button {
-z-index: 1;
-position: fixed;
-left: 320px;
-top: 45px;
-padding: 10px 20px;
-background-color: goldenrod;
-color: black; /* text color */
-border: none;
-border-radius: 4px;
-font-weight: bold;
-cursor: pointer; /* indicates button is clickable */
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-transition: all 0.3s ease; /*smooth transition for hover effects */
-}
-
-#search-button:hover {
-  background-color: #e64a19;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
+  z-index: 1;
+  position: fixed;
+  left: 320px;
+  top: 20;
+  
 }
 
 #results-container {
+
   position: fixed;
   left: 25px; 
   top: 30%;
@@ -94,25 +49,21 @@ transition: all 0.3s ease; /*smooth transition for hover effects */
   top: auto;
   left: auto;
   background-color: gold; /* Green background color */
-  color: black; /* White text color */
+  color: white; /* White text color */
   padding: 10px 20px; /* Padding for the button */
   border: none; /* Remove border */
   cursor: pointer; /* Add cursor pointer on hover */
   border-radius: 5px; /* Rounded corners */
   margin-top: 15px; /* Add space between elements */
 }
-.character-card button:hover {
-  background-color: #e64a19;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
-}
+
 
 
 .button {
   position: absolute;
   top: 0; /* Align at the top */
   right: 0; /* Align to the right */
-  background-color: #ffffff; /* Green background color */
+  background-color: #4CAF50; /* Green background color */
   color: white; /* White text color */
   padding: 5px 10px; /* Padding for the button */
   border: none; /* Remove border */
@@ -134,21 +85,14 @@ transition: all 0.3s ease; /*smooth transition for hover effects */
 }
 
 .character-card {
-  flex: 0 1 200px; /* Start at 200px but allow flexing */
+  flex: 0 1 200px; /* Each card can grow to fill space, but starts at 200px */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items */
-  padding: 20px; /* Increased padding for better spacing */
-  box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* Softer shadow for depth */
+  align-items: center; /* Align items in the center of the card */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* adds shadow for depth */
   background-color: #fff; /* Card background color */
-  border-radius: 10px; /* Rounded corners for a modern look */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
-  border: 1px solid #e0e0e0; /* Subtle border for definition */
-}
-
-.character-card:hover {
-  transform: translateY(-5px); /* Slight raise effect on hover */
-  box-shadow: 0 12px 20px rgba(0,0,0,0.2); /* Enhanced shadow on hover for depth */
+  border-radius: 5px; /* rounds the corners of the cards */
 }
 
 #results-container {

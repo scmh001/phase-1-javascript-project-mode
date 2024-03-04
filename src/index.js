@@ -1,5 +1,6 @@
 const api1 = "https://json-server-scmh.onrender.com/";
 const charAPI = "https://json-server-scmh.onrender.com/gotChar";
+const data = "gotChar"
 
 let characters;
 
@@ -103,22 +104,20 @@ function displayCharacters(characters) {
       card.appendChild(infoDetails);
 
       resultsContainer.appendChild(card);
+      
   });
 }
-// Event listener for search input
-document.getElementById('search-bar').addEventListener('input', function() {
-  const searchInput = this.value.toLowerCase();
+// event listener for search button 'click'
+document.getElementById('search-button').addEventListener('click', function() {
+  console.log("i've been pressed")
+  const searchInput = document.getElementById('search-bar').value.toLowerCase();
   const filteredCharacters = characters.filter(character => {
       const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
       return fullName.includes(searchInput);
   });
   displayCharacters(filteredCharacters);
 });
-
-  })
-  .catch(error => console.error('Error fetching data:', error));
-
-     // Event listener for search button click //need to de-bug search bar
+ // Event listener for search button click //~~~~~need to de-bug search bar
      document.getElementById('search-button').addEventListener('click', function() {
       console.log("i've been pressed")
       const searchInput = document.getElementById('search-bar').value.toLowerCase();
@@ -128,6 +127,9 @@ document.getElementById('search-bar').addEventListener('input', function() {
       });
       displayCharacters(filteredCharacters);
   });
+  })
+  .catch(error => console.error('Error fetching data:', error));
+
   
 
 

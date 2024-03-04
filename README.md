@@ -21,18 +21,18 @@ User is able to filter Game of Thrones character by family house, gives user lis
 * User is able to select through GoT soundtracks
 * User can select through families via keydown event to move through different families without having to use dropdown.
 * User is able to view best quotes from each character.
-* User is able to customize site background to house logos
+* User is able to customize site background to _great house_ logos
 
 ## Event Listeners
 > These are 3 of the event listeners in use.
-* 'change'
-* 'click'
+* 'change' - When the 'change' event is triggered, an anonymous function is executed. Inside this function, this refers to the select element that triggered the event
+* 'click' - 
 * 'input'
 
 ## Array Iteration
 > This is how we will use array iteration
-* '.forEach' will be used to display each family in our house filter dropdown to be able to select each house / family name.
-* '.map' will be used for mapping a new array that contains only the family names of each character.
+* '.forEach' - used to display each family in our house filter dropdown to be able to select each house / family name.
+* '.map' - used for mapping a new array that contains only the family names of each character.
 
 ## Framework Example - db.json
 <img src="assets\dbimg.png">

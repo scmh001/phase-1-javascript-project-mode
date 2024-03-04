@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <title>Game of Thrones Glossary</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>HTML5 Audio Player</title>
+    <style>
+        #playlist{
+            list-style: none;
+        }
+        #playlist li a{
+            color: white;
+            text-decoration: none;
+
+        }
+        #playlist .current-song a{
+            color: blue;
+        }
+    </style>
 
 </head>
-<style>
-    body {
-        background-image: url("assets/background.jpg"); 
-            background-size: cover; 
-            background-position: center;
-        }
-</style>
-<body>
-    
-   
+<body style= "background-image: url('assets/background.jpg');">
+
+
 
     <header>
         <h3>Game of Thrones Glossary</h3>
-       
+        <!-- Move the select dropdown to the navigation bar -->
         <select id="family-filter">
-            
             <option value="">All Families</option>
             <!-- Populate this dropdown dynamically with unique family names -->
         </select>
@@ -38,6 +44,21 @@
     </div> -->
     
     <script defer src="src\index.js"></script>
+
+    <audio src= "" >controls id= "audioPlayer"</audio>
+            Sorry, your browser does not support HTML5!
+    <ul id="playlist">
+        <li class = "current-song"><a href="opening-theme.mp3">Opening Theme</a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+    <script src="https://archive.org/details/tvtunes_20712">
+    </script>
+    <script src="audioPlayer.js">
+    </script>
+    <script>
+        audioPlayer();
+    </script>
     
 </body>
 </html>
