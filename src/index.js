@@ -8,6 +8,8 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
   .then(data => {
     characters = data; // characters are stored in gotChar array
 
+
+
     // Get unique family names
     const uniqueFamilies = [...new Set(characters.map(character => character.family))];
 
@@ -95,6 +97,6 @@ document.getElementById('search-bar').addEventListener('input', function() {
   })
   .catch(error => console.error('Error fetching data:', error));
 
-
+ document.body.style.backgroundImage = "/Users/theryous/Development/code/phase-1/phase-1-javascript-project-mode/phase-1-javascript-project-mode/assets/background.jpg"; 
 
 
