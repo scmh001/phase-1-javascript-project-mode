@@ -9,6 +9,19 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
   .then(data => {
     characters = data; // characters are stored in gotChar array
 
+    fetch('https://json-server-scmh.onrender.com/gotChar')
+   .then(res => {
+     if (res.ok) {
+       return res.json()
+     } else {
+       console.error('something went wrong')
+     }
+   })
+   .then(character => {
+     displayCharacters(character)
+   })
+
+
     // Get unique family names
     const uniqueFamilies = [...new Set(characters.map(character => character.family))];
 
