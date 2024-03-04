@@ -5,12 +5,25 @@
     <title>Game of Thrones Glossary</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
+<!-- making big changes after this comment -->
+
 </head>
 <body style= "background-image: url('assets/background.jpg');">
     
-    <audio src="assets/gottheme.mp3" controls id="audioPlayer">
+    <!-- <audio src="assets/gottheme.mp3" controls id="audioPlayer">
 
+    </audio> -->
+    <!-- changed audio controls to accept multiple sources -->
+    <audio controls id="audioPlayer">
+        <source src="assets/gottheme.mp3" type="audio/mpeg" id="audioSource1">
+        <source src="assets/LannisterTheme.mp3" type="audio/mpeg" id="audioSource2">
+        
     </audio>
+    <select id="audio-select">
+        <option value="assets/gottheme.mp3">Game of Thrones Theme</option>
+        <option value="assets/LannisterTheme.mp3">Lannister Theme</option>
+         
+    </select>
    
 
     <header>

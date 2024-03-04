@@ -107,6 +107,27 @@ function displayCharacters(characters) {
       
   });
 }
+//event listener for dropdown audio file selector
+document.addEventListener('DOMContentLoaded', function () {
+  var audioPlayer = document.getElementById('audioPlayer');
+  var audioSelect = document.getElementById('audio-select');
+
+  audioSelect.addEventListener('change', function () {
+      var selectedAudio = audioSelect.value;
+      switch (selectedAudio) {
+      case 'assets/gottheme.mp3':
+       audioPlayer.src = audioSource1;
+       break;
+      case 'assets/LannisterTheme.mp3':
+        audioPlayer.src = audioSource2.src;
+        break;
+      }
+      audioPlayer.load();
+      audioPlayer.play();
+  });
+});
+
+
 // event listener for search button 'click'
 document.getElementById('search-button').addEventListener('click', function() {
   console.log("i've been pressed")
