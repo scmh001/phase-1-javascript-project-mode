@@ -1,5 +1,6 @@
 const api1 = "https://json-server-scmh.onrender.com/";
 const charAPI = "https://json-server-scmh.onrender.com/gotChar";
+const data = "gotChar"
 
 let characters;
 
@@ -119,7 +120,6 @@ document.getElementById('search-button').addEventListener('click', function() {
   })
   .catch(error => console.error('Error fetching data:', error));
 
-    
   
 
 

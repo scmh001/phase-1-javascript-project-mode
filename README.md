@@ -25,8 +25,8 @@ User is able to filter Game of Thrones character by family house, gives user lis
 
 ## Event Listeners
 > These are 3 of the event listeners in use.
-* 'change' - Changes 
-* 'click'
+* 'change' - When the 'change' event is triggered, an anonymous function is executed. Inside this function, this refers to the select element that triggered the event
+* 'click' - 
 * 'input'
 
 ## Array Iteration
