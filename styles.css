@@ -6,7 +6,12 @@
   to { opacity: 1; }
 }
 
-
+@media (max-width: 768px) {
+  audio {
+    width: 90%;
+    padding: 0.5em 1em;
+  }
+}
 
 body {
     padding: 1rem;
