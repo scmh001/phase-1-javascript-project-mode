@@ -38,52 +38,52 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
     });
     
 
-    // Function to filter characters based on selected family
-    select.addEventListener('change', function() {
-      const selectedFamily = this.value;
-      const filteredCharacters = selectedFamily ? characters.filter(character => character.family === selectedFamily) : characters;
+ // Function to filter characters based on selected family
+ select.addEventListener('change', function() {
+  const selectedFamily = this.value;
+  const filteredCharacters = selectedFamily ? characters.filter(character => character.family === selectedFamily) : characters;
 
-      // Display filtered characters in results container
-      displayCharacters(filteredCharacters);
-     
-      switch (selectedFamily) {
-        case 'House Stark':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Stark Logo.jpg")';
-            break;
-        case 'House Targaryen':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Targaryen.jpg")';
-            break;    
-        case 'House Greyjoy':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Greyjoy.jpg")';
-            break;
-        case 'House Tarly':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Tarly.jpeg")';
-            break;
-        case 'House Baratheon':
-            document.body.style.backgroundImage = 'url("assets/House Logos/Baratheon.webp")';
-            break;
-        case 'House Lannister':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
-            break;
-        case 'House Lanister':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
-            break;
-        case 'House Clegane':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Clegane.jpeg")';
-            break;
-        case 'House Baelish':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Baelish.jpeg")';
-            break;
-        case 'House Seaworth':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Seaworth.jpeg")';
-            break;
-        case 'House Tyrell':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Tyrell.jpg")';
-            break;
-        default:
-            document.body.style.backgroundImage = 'url("assets/House Logos/ETC Family.jpg")';
-    }
-    });
+  // Display filtered characters in results container
+  displayCharacters(filteredCharacters);
+ 
+  switch (selectedFamily) {
+    case 'House Stark':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Stark Logo.jpg")';
+        break;
+    case 'House Targaryen':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Targaryen.jpg")';
+        break;    
+    case 'House Greyjoy':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Greyjoy.jpg")';
+        break;
+    case 'House Tarly':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Tarly.jpeg")';
+        break;
+    case 'House Baratheon':
+        document.body.style.backgroundImage = 'url("assets/House Logos/Baratheon.webp")';
+        break;
+    case 'House Lannister':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
+        break;
+    case 'House Lanister':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
+        break;
+    case 'House Clegane':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Clegane.jpeg")';
+        break;
+    case 'House Baelish':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Baelish.jpeg")';
+        break;
+    case 'House Seaworth':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Seaworth.jpeg")';
+        break;
+    case 'House Tyrell':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Tyrell.jpg")';
+        break;
+    default:
+        document.body.style.backgroundImage = 'url("assets/background.jpg")';
+}
+});
 
 // Function to display characters in results container with additional information
 function displayCharacters(characters) {
@@ -135,31 +135,16 @@ function displayCharacters(characters) {
       
   });
 }
-// event listener for search button 'click'
-document.getElementById('search-button').addEventListener('click', function() {
-  console.log("i've been pressed")
-  const searchInput = document.getElementById('search-bar').value.toLowerCase();
+// Event listener for search input
+document.getElementById('search-bar').addEventListener('input', function() {
+  const searchInput = this.value.toLowerCase();
   const filteredCharacters = characters.filter(character => {
       const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
       return fullName.includes(searchInput);
   });
   displayCharacters(filteredCharacters);
 });
- // Event listener for search button click //~~~~~need to de-bug search bar
-     document.getElementById('search-button').addEventListener('click', function() {
-      console.log("i've been pressed")
-      const searchInput = document.getElementById('search-bar').value.toLowerCase();
-      const filteredCharacters = characters.filter(character => {
-          const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
-          return fullName.includes(searchInput);
-      });
-      displayCharacters(filteredCharacters);
-  });
-  })
-  .catch(error => console.error('Error fetching data:', error));
+  }) 
+
 
   
-
-
-
-

@@ -1,5 +1,6 @@
 const api1 = "https://json-server-scmh.onrender.com/";
 const charAPI = "https://json-server-scmh.onrender.com/gotChar";
+const data = "gotChar"
 
 let characters;
 
@@ -8,6 +9,19 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
   .then(response => response.json())
   .then(data => {
     characters = data; // characters are stored in gotChar array
+
+    fetch('https://json-server-scmh.onrender.com/gotChar')
+   .then(res => {
+     if (res.ok) {
+       return res.json()
+     } else {
+       console.error('something went wrong')
+     }
+   })
+   .then(character => {
+     displayCharacters(character)
+   })
+
 
     // Get unique family names
     const uniqueFamilies = [...new Set(characters.map(character => character.family))];
@@ -31,6 +45,16 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
 
       // Display filtered characters in results container
       displayCharacters(filteredCharacters);
+      switch (selectedFamily) {
+        case 'House Stark':
+            document.body.style.backgroundImage = 'url("assets/House Logos/House Stark Logo.jpg")';
+            break;
+        case 'House Greyjoy':
+            document.body.style.backgroundImage = 'url("assets/House Logos/House Greyjoy.jpg")';
+            break;
+        default:
+            document.body.style.backgroundImage = 'url("assets/background.jpg")';
+    }
     });
 
 // Function to display characters in results container with additional information
@@ -80,24 +104,53 @@ function displayCharacters(characters) {
       card.appendChild(infoDetails);
 
       resultsContainer.appendChild(card);
+      
   });
 }
-// -------Moved Event listener for search button inside of fetch-----
-//--------Deleted Event listener for search input. Search button should now work alone.
-document.getElementById('search-button').addEventListener('click', function() {
-    console.log("i've been pressed")
-    const searchInput = document.getElementById('search-bar').value.toLowerCase();
-    const filteredCharacters = characters.filter(character => {
-        const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
-        return fullName.includes(searchInput);
-    });
-    displayCharacters(filteredCharacters);
+//event listener for dropdown audio file selector
+document.addEventListener('DOMContentLoaded', function () {
+  var audioPlayer = document.getElementById('audioPlayer');
+  var audioSelect = document.getElementById('audio-select');
 
-  })
-//   .catch(error => console.error('Error fetching data:', error));
-
-     
+  audioSelect.addEventListener('change', function () {
+      var selectedAudio = audioSelect.value;
+      switch (selectedAudio) {
+      case 'assets/gottheme.mp3':
+       audioPlayer.src = audioSource1;
+       break;
+      case 'assets/LannisterTheme.mp3':
+        audioPlayer.src = audioSource2.src;
+        break;
+      }
+      audioPlayer.load();
+      audioPlayer.play();
   });
+});
+
+
+// event listener for search button 'click'
+document.getElementById('search-button').addEventListener('click', function() {
+  console.log("i've been pressed")
+  const searchInput = document.getElementById('search-bar').value.toLowerCase();
+  const filteredCharacters = characters.filter(character => {
+      const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
+      return fullName.includes(searchInput);
+  });
+  displayCharacters(filteredCharacters);
+});
+ // Event listener for search button click //~~~~~need to de-bug search bar
+     document.getElementById('search-button').addEventListener('click', function() {
+      console.log("i've been pressed")
+      const searchInput = document.getElementById('search-bar').value.toLowerCase();
+      const filteredCharacters = characters.filter(character => {
+          const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
+          return fullName.includes(searchInput);
+      });
+      displayCharacters(filteredCharacters);
+  });
+  })
+  .catch(error => console.error('Error fetching data:', error));
+
   
 
 
