@@ -140,6 +140,17 @@ function displayCharacters(characters) {
       
   });
 }
+document.getElementById('search-bar').addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    console.log("Enter key pressed");
+    const searchInput = this.value.toLowerCase();
+    const filteredCharacters = characters.filter(character => {
+      const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
+      return fullName.includes(searchInput);
+    });
+    displayCharacters(filteredCharacters);
+  }
+});
 
   });
   document.addEventListener('DOMContentLoaded', function () {
@@ -167,7 +178,7 @@ function displayCharacters(characters) {
   })
   
   const footer = document.getElementById('teamGotFooter');
-  footer.innerHTML = '<p>© 2024 Game of Thrones Grocery. All rights reserved.</p><p>Flatiron GOT Team</p>';
+  footer.innerHTML = '<p>© 2024 Game of Thrones Glossary. All rights reserved.</p><p>Flatiron GOT Team</p>';
 
 
   
