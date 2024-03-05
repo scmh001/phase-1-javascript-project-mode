@@ -23,7 +23,15 @@
 <!--^^working html for search bar-->
 
 <!----------------------------------------------------------------------------------------------------------------------------------------------->
-
-<div id="song">
-    <p>GoT Theme Song</p>
+<!-- created div for audio container -->
+<div id="audioContainer">
+    <audio controls id="audioPlayer">
+        <source src="assets/gottheme.mp3" type="audio/mpeg" id="audioSource1">
+    </audio>
 </div>
+<select id="audio-select">
+
+    <option value="assets/gottheme.mp3">Game of Thrones Theme</option>
+    <option value="assets/LannisterTheme.mp3">Lannister Theme</option>
+
+</select>
