@@ -82,11 +82,11 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
             document.body.style.backgroundImage = 'url("assets/House Logos/House Tyrell.jpg")';
             break;
         // fixed back to all family background
-        case "all family" :
+        case "All Families" :
             document.body.style.backgroundImage = 'url("assets/background.jpg")';
             break;
         default:
-            document.body.style.backgroundImage = 'url("assets/House Logos/ETC Family.jpg")';
+            document.body.style.backgroundImage = 'url("assets/background.jpg")';
     }
     });
 
@@ -176,7 +176,8 @@ document.getElementById('search-bar').addEventListener('keydown', function(event
         audioPlayer.play();
     })
   })
-  
+
+  //add footer
   const footer = document.getElementById('teamGotFooter');
   footer.innerHTML = '<p>© 2024 Game of Thrones Glossary. All rights reserved.</p><p>Flatiron GOT Team</p>';
 
