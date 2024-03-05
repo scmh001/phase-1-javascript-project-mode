@@ -24,7 +24,8 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
 
 
     // Get unique family names
-    const uniqueFamilies = [...new Set(characters.map(character => character.family))];
+    // fixed the empty space in the drop down menu
+    const uniqueFamilies = [...new Set(characters.map(character => character.family.trim()))].filter(family => family.trim() !== "");
 
 
     
@@ -35,6 +36,7 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
       option.text = family;
       option.value = family;
       select.add(option);
+
     });
     
 
@@ -132,6 +134,7 @@ function displayCharacters(characters) {
       card.appendChild(infoDetails);
 
       resultsContainer.appendChild(card);
+<<<<<<< HEAD
 // Event listener for search input
 document.getElementById('search-bar').addEventListener('input', function() {
   const searchInput = this.value.toLowerCase();
@@ -146,6 +149,12 @@ document.getElementById('search-bar').addEventListener('input', function() {
   });
 }
 
+=======
+      
+  });
+}
+
+>>>>>>> d3e8cb00c4ef98f6e0441726930886e3eedafe41
   });
   document.addEventListener('DOMContentLoaded', function () {
     // finds the audio player and source elements
@@ -172,4 +181,8 @@ document.getElementById('search-bar').addEventListener('input', function() {
   })
   
 
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> d3e8cb00c4ef98f6e0441726930886e3eedafe41
