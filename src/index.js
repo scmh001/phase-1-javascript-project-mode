@@ -135,31 +135,31 @@ function displayCharacters(characters) {
       
   });
 }
-// event listener for search button 'click'
-document.getElementById('search-button').addEventListener('click', function() {
-  console.log("i've been pressed")
-  const searchInput = document.getElementById('search-bar').value.toLowerCase();
-  const filteredCharacters = characters.filter(character => {
-      const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
-      return fullName.includes(searchInput);
-  });
-  displayCharacters(filteredCharacters);
-});
- // Event listener for search button click //~~~~~need to de-bug search bar
-     document.getElementById('search-button').addEventListener('click', function() {
-      console.log("i've been pressed")
-      const searchInput = document.getElementById('search-bar').value.toLowerCase();
-      const filteredCharacters = characters.filter(character => {
-          const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
-          return fullName.includes(searchInput);
-      });
-      displayCharacters(filteredCharacters);
-  });
-  })
-  .catch(error => console.error('Error fetching data:', error));
 
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    // finds the audio player and source elements
+    var audioPlayer = document.getElementById('audioPlayer');
+    var audioSource = audioPlayer.querySelector('source');
+  
+    // finds the audio drop down
+    var audioSelect = document.getElementById('audio-select');
+  
+    // added event listener to dropdown change
+    audioSelect.addEventListener('change', function () {
+        // stores drop down value
+        var selectedAudio = audioSelect.value;
+  
+        // update audio source with dropdown value
+        audioSource.src = selectedAudio;
+  
+        // The load() method is necessary to reload the audio element with the new source
+        audioPlayer.load();
+  
+        // starts playing the song
+        audioPlayer.play();
+    })
+  })
   
 
-
-
-
+  
