@@ -24,7 +24,8 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
 
 
     // Get unique family names
-    const uniqueFamilies = [...new Set(characters.map(character => character.family))];
+    // fixed the empty space in the drop down menu
+    const uniqueFamilies = [...new Set(characters.map(character => character.family.trim()))].filter(family => family.trim() !== "");
 
 
     
@@ -35,6 +36,7 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
       option.text = family;
       option.value = family;
       select.add(option);
+
     });
     
 
