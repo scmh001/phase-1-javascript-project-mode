@@ -65,11 +65,10 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
             document.body.style.backgroundImage = 'url("assets/House Logos/Baratheon.webp")';
             break;
         case 'House Lannister':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
-            break;
         case 'House Lanister':
             document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
-            break;
+            break;              
+          
         case 'House Clegane':
             document.body.style.backgroundImage = 'url("assets/House Logos/House Clegane.jpeg")';
             break;
@@ -82,8 +81,12 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
         case 'House Tyrell':
             document.body.style.backgroundImage = 'url("assets/House Logos/House Tyrell.jpg")';
             break;
-        default:
+        // fixed back to all family background
+        case "all family" :
             document.body.style.backgroundImage = 'url("assets/background.jpg")';
+            break;
+        default:
+            document.body.style.backgroundImage = 'url("assets/House Logos/ETC Family.jpg")';
     }
     });
 
@@ -138,18 +141,6 @@ function displayCharacters(characters) {
   });
 }
 
-document.getElementById('search-bar').addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-    console.log("Enter key pressed");
-    const searchInput = this.value.toLowerCase();
-    const filteredCharacters = characters.filter(character => {
-      const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
-      return fullName.includes(searchInput);
-    });
-    displayCharacters(filteredCharacters);
-  }
-});
-
   });
   document.addEventListener('DOMContentLoaded', function () {
     // finds the audio player and source elements
@@ -175,5 +166,8 @@ document.getElementById('search-bar').addEventListener('keydown', function(event
     })
   })
   
+  const footer = document.getElementById('teamGotFooter');
+  footer.innerHTML = '<p>© 2024 Game of Thrones Grocery. All rights reserved.</p><p>Flatiron GOT Team</p>';
+
 
   
