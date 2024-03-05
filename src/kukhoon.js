@@ -81,6 +81,10 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
         case 'House Tyrell':
             document.body.style.backgroundImage = 'url("assets/House Logos/House Tyrell.jpg")';
             break;
+            // fixed back to all family background
+        case "all family" :
+            document.body.style.backgroundImage = 'url("assets/background.jpg")';
+            break;
         default:
             document.body.style.backgroundImage = 'url("assets/House Logos/ETC Family.jpg")';
     }
