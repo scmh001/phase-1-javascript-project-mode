@@ -128,3 +128,11 @@ border-top-right-radius: 5px; /* rounds the top right corner of the image */
   z-index: 1000; /* High value to ensure it's on top */
   
 }
+
+
+/* #song {
+  position: absolute; 
+  z-index: 3; 
+  right: 202px;
+  top: 60px;
+} */

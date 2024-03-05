@@ -43,7 +43,8 @@ User is able to filter Game of Thrones character by family house, gives user lis
 
 ## Trello
  <img src="assets\trello2.png">
- * https://trello.com/b/502vEAXP/flatiron-phase-1-group-project
+
+* https://trello.com/b/502vEAXP/flatiron-phase-1-group-project
  
 ## Endpoint
 
