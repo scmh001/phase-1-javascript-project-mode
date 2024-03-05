@@ -167,7 +167,7 @@ function displayCharacters(characters) {
   })
   
   const footer = document.getElementById('teamGotFooter');
-  footer.innerHTML = '<p>© 2024 Game of Thrones Grocery. All rights reserved.</p><p>Flatiron GOT Team</p>';
+  footer.innerHTML = '<p>© 2024 Game of Thrones Glossary. All rights reserved.</p><p>Flatiron GOT Team</p>';
 
 
   
