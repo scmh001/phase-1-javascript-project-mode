@@ -86,7 +86,7 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
             document.body.style.backgroundImage = 'url("assets/background.jpg")';
             break;
         default:
-            document.body.style.backgroundImage = 'url("assets/House Logos/ETC Family.jpg")';
+            document.body.style.backgroundImage = 'url("assets/background.jpg")';
     }
     });
 
@@ -168,7 +168,7 @@ function displayCharacters(characters) {
 
   //add footer
   const footer = document.getElementById('teamGotFooter');
-  footer.innerHTML = '<p>© 2024 Game of Thrones Grocery. All rights reserved.</p><p>Flatiron GOT Team</p>';
+  footer.innerHTML = '<p>© 2024 Game of Thrones Glossary. All rights reserved.</p><p>Flatiron GOT Team</p>';
 
 
   
