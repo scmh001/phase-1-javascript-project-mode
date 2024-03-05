@@ -129,11 +129,10 @@ border-top-right-radius: 5px; /* rounds the top right corner of the image */
   
 }
 
-/* ---------------------------------------------------------------------------------- */
 
- #audio-select{
-  position: fixed;
-  top: 40px;
-  right: 20px;
-  z-index: 3;
-s
+/* #song {
+  position: absolute; 
+  z-index: 3; 
+  right: 202px;
+  top: 60px;
+} */
