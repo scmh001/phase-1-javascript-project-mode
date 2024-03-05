@@ -52,22 +52,30 @@ header h3 {
 }
 
 #audio-select{
+  width: 8%;
   position: fixed;
-  top: 40px;
-  right: 20px;
+  cursor: pointer;
+  top: 108px;
+  right: 145px;
   z-index: 3;
-
 }
 
 audio {
-  width: 25%; /* Full width of its container */
+  width: 22%; /* Full width of its container */
   outline: none; /* Remove focus outline */
   padding: 1em 2em;
-  border-radius: 50%;
-  border-width: thin;
-  background-color: black;
   cursor: pointer; /* Add cursor pointer on hover */
   opacity: inherit;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Subtle gradient background */
+  border: 1px solid #ccc; /* Border to define edges */
+  transition: transform 0.2s ease-in-out; /* Smooth transition for interaction */
+}
+
+audio:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
 
