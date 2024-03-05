@@ -135,26 +135,6 @@ function displayCharacters(characters) {
       
   });
 }
-//event listener for dropdown audio file selector
-document.addEventListener('DOMContentLoaded', function () {
-  var audioPlayer = document.getElementById('audioPlayer');
-  var audioSelect = document.getElementById('audio-select');
-
-  audioSelect.addEventListener('change', function () {
-      var selectedAudio = audioSelect.value;
-      switch (selectedAudio) {
-      case 'assets/gottheme.mp3':
-       audioPlayer.src = audioSource1;
-       break;
-      case 'assets/LannisterTheme.mp3':
-        audioPlayer.src = audioSource2.src;
-        break;
-      }
-      audioPlayer.load();
-      audioPlayer.play();
-  });
-});
-
 
 // event listener for search button 'click'
 document.getElementById('search-button').addEventListener('click', function() {
@@ -177,6 +157,39 @@ document.getElementById('search-button').addEventListener('click', function() {
       displayCharacters(filteredCharacters);
   });
   })
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // finds the main audio container
+    var audioContainer = document.getElementById('audioContainer');
+    //finds the audio drop down
+    var audioSelect = document.getElementById('audio-select');
+
+    //created a new audio element
+    var newAudio = document.createElement('audio')
+    newAudio.id       = 'audioPlayer';
+    newAudio.controls = 'controls';
+    newAudio.type     = 'audio/mpeg';
+    
+    // added event listener to dropdown change
+    audioSelect.addEventListener('change', function () {
+        // stores drop down value
+        var selectedAudio = audioSelect.value;
+
+        //update audio source with dropdown value
+        newAudio.innerHTML = `<source src="${selectedAudio}" type="audio/mpeg">`
+
+        // clears old audio tag
+        audioContainer.innerHTML = ''
+        //appends new audio tag
+        audioContainer.append(newAudio)
+
+        // not sure what load() does but I need it/music won't play without it
+        newAudio.load();
+        // starts playing the song
+        newAudio.play();
+    });
+  })
+
   .catch(error => console.error('Error fetching data:', error));
 
   
