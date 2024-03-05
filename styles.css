@@ -48,14 +48,13 @@ header h3 {
   top: 60px; /* Distance from the bottom */
   right: 20px; /* Distance from the left */
   z-index: 2; /* Ensure it's above other content */
- 
 }
 
 #audio-select{
-  width: 8%;
+  width: 9%;
   position: fixed;
   cursor: pointer;
-  top: 108px;
+  top: 148px;
   right: 145px;
   z-index: 3;
 }
@@ -78,7 +77,9 @@ audio:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
-
+audio:focus-within {
+  box-shadow: 0 0 0 2px goldenrod;
+}
 
 /* aligned search bar with header, brought z-index to 1 so that screen will scroll beneath header and search bar */
 #search-bar {
