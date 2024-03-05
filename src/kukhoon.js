@@ -24,7 +24,8 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
 
 
     // Get unique family names
-    const uniqueFamilies = [...new Set(characters.map(character => character.family))];
+    // fixed the empty space in the drop down menu
+    const uniqueFamilies = [...new Set(characters.map(character => character.family.trim()))].filter(family => family.trim() !== "");
 
 
     
@@ -46,7 +47,7 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
       // Display filtered characters in results container
       displayCharacters(filteredCharacters);
      
-      switch (selectedFamily) {
+      switch (selectedFamily) { //add backgrounds for the Great Houses
         case 'House Stark':
             document.body.style.backgroundImage = 'url("assets/House Logos/House Stark Logo.jpg")';
             break;
@@ -159,5 +160,7 @@ document.getElementById('search-button').addEventListener('click', function() {
   .catch(error => console.error('Error fetching data:', error));
 
   
+
+
 
 
