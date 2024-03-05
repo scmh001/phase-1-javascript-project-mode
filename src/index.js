@@ -38,52 +38,52 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
     });
     
 
-    // Function to filter characters based on selected family
-    select.addEventListener('change', function() {
-      const selectedFamily = this.value;
-      const filteredCharacters = selectedFamily ? characters.filter(character => character.family === selectedFamily) : characters;
+ // Function to filter characters based on selected family
+ select.addEventListener('change', function() {
+  const selectedFamily = this.value;
+  const filteredCharacters = selectedFamily ? characters.filter(character => character.family === selectedFamily) : characters;
 
-      // Display filtered characters in results container
-      displayCharacters(filteredCharacters);
-     
-      switch (selectedFamily) {
-        case 'House Stark':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Stark Logo.jpg")';
-            break;
-        case 'House Targaryen':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Targaryen.jpg")';
-            break;    
-        case 'House Greyjoy':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Greyjoy.jpg")';
-            break;
-        case 'House Tarly':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Tarly.jpeg")';
-            break;
-        case 'House Baratheon':
-            document.body.style.backgroundImage = 'url("assets/House Logos/Baratheon.webp")';
-            break;
-        case 'House Lannister':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
-            break;
-        case 'House Lanister':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
-            break;
-        case 'House Clegane':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Clegane.jpeg")';
-            break;
-        case 'House Baelish':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Baelish.jpeg")';
-            break;
-        case 'House Seaworth':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Seaworth.jpeg")';
-            break;
-        case 'House Tyrell':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Tyrell.jpg")';
-            break;
-        default:
-            document.body.style.backgroundImage = 'url("assets/House Logos/ETC Family.jpg")';
-    }
-    });
+  // Display filtered characters in results container
+  displayCharacters(filteredCharacters);
+ 
+  switch (selectedFamily) {
+    case 'House Stark':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Stark Logo.jpg")';
+        break;
+    case 'House Targaryen':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Targaryen.jpg")';
+        break;    
+    case 'House Greyjoy':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Greyjoy.jpg")';
+        break;
+    case 'House Tarly':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Tarly.jpeg")';
+        break;
+    case 'House Baratheon':
+        document.body.style.backgroundImage = 'url("assets/House Logos/Baratheon.webp")';
+        break;
+    case 'House Lannister':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
+        break;
+    case 'House Lanister':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
+        break;
+    case 'House Clegane':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Clegane.jpeg")';
+        break;
+    case 'House Baelish':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Baelish.jpeg")';
+        break;
+    case 'House Seaworth':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Seaworth.jpeg")';
+        break;
+    case 'House Tyrell':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Tyrell.jpg")';
+        break;
+    default:
+        document.body.style.backgroundImage = 'url("assets/background.jpg")';
+}
+});
 
 // Function to display characters in results container with additional information
 function displayCharacters(characters) {
@@ -135,65 +135,16 @@ function displayCharacters(characters) {
       
   });
 }
-
-// event listener for search button 'click'
-document.getElementById('search-button').addEventListener('click', function() {
-  console.log("i've been pressed")
-  const searchInput = document.getElementById('search-bar').value.toLowerCase();
+// Event listener for search input
+document.getElementById('search-bar').addEventListener('input', function() {
+  const searchInput = this.value.toLowerCase();
   const filteredCharacters = characters.filter(character => {
       const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
       return fullName.includes(searchInput);
   });
   displayCharacters(filteredCharacters);
 });
- // Event listener for search button click //~~~~~need to de-bug search bar
-     document.getElementById('search-button').addEventListener('click', function() {
-      console.log("i've been pressed")
-      const searchInput = document.getElementById('search-bar').value.toLowerCase();
-      const filteredCharacters = characters.filter(character => {
-          const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
-          return fullName.includes(searchInput);
-      });
-      displayCharacters(filteredCharacters);
-  });
-  })
+  }) 
 
-  document.addEventListener('DOMContentLoaded', function () {
-    // finds the main audio container
-    var audioContainer = document.getElementById('audioContainer');
-    //finds the audio drop down
-    var audioSelect = document.getElementById('audio-select');
-
-    //created a new audio element
-    var newAudio = document.createElement('audio')
-    newAudio.id       = 'audioPlayer';
-    newAudio.controls = 'controls';
-    newAudio.type     = 'audio/mpeg';
-    
-    // added event listener to dropdown change
-    audioSelect.addEventListener('change', function () {
-        // stores drop down value
-        var selectedAudio = audioSelect.value;
-
-        //update audio source with dropdown value
-        newAudio.innerHTML = `<source src="${selectedAudio}" type="audio/mpeg">`
-
-        // clears old audio tag
-        audioContainer.innerHTML = ''
-        //appends new audio tag
-        audioContainer.append(newAudio)
-
-        // not sure what load() does but I need it/music won't play without it
-        newAudio.load();
-        // starts playing the song
-        newAudio.play();
-    });
-  })
-
-  .catch(error => console.error('Error fetching data:', error));
 
   
-
-
-
-
