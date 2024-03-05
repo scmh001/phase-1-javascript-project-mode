@@ -118,7 +118,7 @@ transition: all 0.3s ease; /*smooth transition for hover effects */
   top: auto;
   left: auto;
   background-color: gold; /* Green background color */
-  color: black; /* White text color */
+  color: black; 
   padding: 10px 20px; /* Padding for the button */
   border: none; /* Remove border */
   cursor: pointer; /* Add cursor pointer on hover */
@@ -158,6 +158,7 @@ transition: all 0.3s ease; /*smooth transition for hover effects */
 }
 
 .character-card {
+  font-family: 'MedievalSharp', cursive;
   flex: 0 1 200px; /* Start at 200px but allow flexing */
   display: flex;
   flex-direction: column;
@@ -194,7 +195,7 @@ transition: all 0.3s ease; /*smooth transition for hover effects */
   align-items: center; /* Align items in the center of the card */
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* adds shadow for depth */
-  background-color: #3f3c3c; /* Card background color */
+  background-color: #6b6262; /* Card background color */
   border-radius: 5px; /* rounds the corners of the cards */
 }
 

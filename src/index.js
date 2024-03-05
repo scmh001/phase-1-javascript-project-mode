@@ -135,16 +135,15 @@ function displayCharacters(characters) {
       
   });
 }
-// event listener for search button 'click'
-document.getElementById('search-button').addEventListener('click', function() {
-  console.log("i've been pressed")
-  const searchInput = document.getElementById('search-bar').value.toLowerCase();
+// Event listener for search input
+document.getElementById('search-bar').addEventListener('input', function() {
+  const searchInput = this.value.toLowerCase();
   const filteredCharacters = characters.filter(character => {
       const fullName = `${character.firstName} ${character.lastName}`.toLowerCase();
       return fullName.includes(searchInput);
   });
   displayCharacters(filteredCharacters);
-})
+});
   }) 
 
 
