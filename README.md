@@ -7,7 +7,7 @@
 
 ###  Your one stop shop for GoT character lore
 Game of Thrones Glossary is a rather simple website designed to give GoT fans the expierence of searching any character from the show and be provided information; while also being able to search entire list of members of each house / family.
-> ..also enjoy the soundtracks as you browse 😃
+> ..also enjoy the soundtracks as you browse to get the full effect 😏😃
 
 ## User Stories
 User is able to filter Game of Thrones character by family house, gives user list and description of each member of specific house. User is able to individualy search for a specific character and is returned charcter description detail upon clicking "More Info" button.
