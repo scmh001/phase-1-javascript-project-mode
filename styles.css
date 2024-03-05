@@ -1,6 +1,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
 body {
     padding: 1rem;
     background-color: #4e4444;
@@ -25,6 +32,7 @@ header {
   background-color: rgb(49, 49, 49);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 header h3 {
   font-family: 'MedievalSharp', cursive;
   font-size: 2em; /* Adjust size as needed */
@@ -36,6 +44,7 @@ header h3 {
   letter-spacing: 1px; /* Increase spacing between letters */
   text-align: center; 
 }
+
 #family-filter {
   position: relative; 
   z-index: 1000; /* High value to ensure it's on top */
@@ -43,42 +52,92 @@ header h3 {
   color: black;
   background-color: goldenrod;
 }
+
 #audioPlayer {
-  position: fixed; 
+  position: fixed;
   top: 60px; /* Distance from the bottom */
   right: 20px; /* Distance from the left */
-  z-index: 2; /* Ensure it's above other content */
+  z-index: 200; /* Ensure it's above other content */
+  border: none;
+  animation: fadeIn 4s ease-in-out;
+}
+
+#play-icon {
+  width: 50px;
+  height: 50px;
+  background: url('assets/play-icon.png') no-repeat center center;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+
+audio::-webkit-media-controls-panel {
+  background: linear-gradient(135deg, goldenrod, #080808);
+  border-radius: 20px;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: #d4c986;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-time-remaining-display{
+  color: rgb(0, 0, 0);
+}
+
+audio::-webkit-media-controls-timeline{
+  border-radius: 40px;
+  background-color: #d4c986;
+}
+
+audio::-webkit-media-controls-volume-slider{
+  background-color: #d4c986;
+  border-radius: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+audio::-webkit-media-controls-mute-button {
+  background-color: #d4c986;
+  border-radius: 50%;
 }
 
 #audio-select {
-  width: 9%;
+  width: auto;
   position: fixed;
   cursor: pointer;
-  top: 148px;
-  right: 145px;
+  top: 134px;
+  right: 155px;
   z-index: 3;
+  padding: 5px 9px;
+  background: linear-gradient(135deg, goldenrod, #080808);
+  font-family: 'MedievalSharp', cursive;
+  color: black;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  animation: fadeIn 4s ease-in-out;
 }
 
+#audio-select:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  cursor: pointer; /* Ensure cursor indicates clickable */
+}
+
+
+
 audio {
-  width: 22%; /* Full width of its container */
+  width: 24%; /* Full width of its container */
   outline: none; /* Remove focus outline */
   padding: 1em 2em;
   cursor: pointer; /* Add cursor pointer on hover */
   opacity: inherit;
   border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Subtle gradient background */
-  border: 1px solid #ccc; /* Border to define edges */
-  transition: transform 0.2s ease-in-out; /* Smooth transition for interaction */
 }
 
 audio:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-}
-
-audio:focus-within {
-  box-shadow: 0 0 0 2px goldenrod;
+ 
 }
 
 /* aligned search bar with header, brought z-index to 1 so that screen will scroll beneath header and search bar */
@@ -94,32 +153,9 @@ audio:focus-within {
   border-bottom: 2px solid #ffd900;
   font-size: 16px;
   transition: all 0.3s ease;
+  font-family: 'MedievalSharp', cursive;
 }
 
-#search-button {
-z-index: 1;
-position: fixed;
-left: 320px;
-top: 45px;
-padding: 10px 20px;
-background-color: goldenrod;
-color: black; /* text color */
-border: none;
-border-radius: 4px;
-font-weight: bold;
-cursor: pointer; /* indicates button is clickable */
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-transition: all 0.3s ease; /*smooth transition for hover effects */
-}
-
-#search-button:hover {
-  background-color: #e64a19;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
-}
-#search-family {
-  z-index: 3;
-}
 #search-family {
   position: fixed;
   z-index: 1000;
@@ -152,13 +188,14 @@ transition: all 0.3s ease; /*smooth transition for hover effects */
   cursor: pointer; /* Add cursor pointer on hover */
   border-radius: 5px; /* Rounded corners */
   margin-top: 15px; /* Add space between elements */
+  font-family: 'Arial', sans-serif;
 }
+
 .character-card button:hover {
   background-color: #e64a19;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
 }
-
 
 .button {
   position: absolute;
@@ -233,14 +270,21 @@ transition: all 0.3s ease; /*smooth transition for hover effects */
   border-top-left-radius: 5px; /* rounds the top left corner of the image */
   border-top-right-radius: 5px; /* rounds the top right corner of the image */
 }
+
 #teamGotFooter {
   z-index: 9999; 
-  position: fixed; 
-    bottom: 0; 
-    left: 0; 
-    width: 100%; /* full screen */
-    background-color: #333; /* background color */
-    color: #fff; /* text color */
-    text-align: center; /* center */
-    padding: 20px; /* inner space */ 
+  position: fixed;
+  border-top: 3px solid #ffd700; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%; /* full screen */
+  background: linear-gradient(to right, #030303, #303105, #0f0b00);
+  color: #fff; /* text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  text-align: center; /* center */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  padding: 90; /* inner space */ 
+  font-family: 'Arial', sans-serif;
+  font-size: 12px;
+    
 }
