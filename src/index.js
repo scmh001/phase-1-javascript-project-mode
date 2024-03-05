@@ -82,7 +82,7 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
             document.body.style.backgroundImage = 'url("assets/House Logos/House Tyrell.jpg")';
             break;
         // fixed back to all family background
-        case "all family" :
+        case "All Families" :
             document.body.style.backgroundImage = 'url("assets/background.jpg")';
             break;
         default:
@@ -165,7 +165,8 @@ function displayCharacters(characters) {
         audioPlayer.play();
     })
   })
-  
+
+  //add footer
   const footer = document.getElementById('teamGotFooter');
   footer.innerHTML = '<p>© 2024 Game of Thrones Grocery. All rights reserved.</p><p>Flatiron GOT Team</p>';
 
