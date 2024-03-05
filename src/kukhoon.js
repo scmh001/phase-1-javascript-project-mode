@@ -164,6 +164,9 @@ document.getElementById('search-button').addEventListener('click', function() {
   .catch(error => console.error('Error fetching data:', error));
 
   
+  //add footer
+  const footer = document.getElementById('teamGotFooter');
+  footer.innerHTML = '<p>© 2024 Game of Thrones Grocery. All rights reserved.</p><p>Flatiron GOT Team</p>';
 
 
 

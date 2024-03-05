@@ -224,3 +224,15 @@ transition: all 0.3s ease; /*smooth transition for hover effects */
   border-top-left-radius: 5px; /* rounds the top left corner of the image */
   border-top-right-radius: 5px; /* rounds the top right corner of the image */
 }
+
+#teamGotFooter {
+  z-index: 9999; /* on top of others (ex. background) */
+  position: fixed; /* fixed place */
+    bottom: 0; /* fixed at the bottom */
+    left: 0; /* fiexd left */
+    width: 100%; /* full screen */
+    background-color: #333; /* background color */
+    color: #fff; /* text color */
+    text-align: center; /* center */
+    padding: 20px; /* inner space */
+}
