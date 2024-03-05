@@ -38,52 +38,52 @@ fetch('https://json-server-scmh.onrender.com/gotChar')
     });
     
 
-    // Function to filter characters based on selected family
-    select.addEventListener('change', function() {
-      const selectedFamily = this.value;
-      const filteredCharacters = selectedFamily ? characters.filter(character => character.family === selectedFamily) : characters;
+ // Function to filter characters based on selected family
+ select.addEventListener('change', function() {
+  const selectedFamily = this.value;
+  const filteredCharacters = selectedFamily ? characters.filter(character => character.family === selectedFamily) : characters;
 
-      // Display filtered characters in results container
-      displayCharacters(filteredCharacters);
-     
-      switch (selectedFamily) {
-        case 'House Stark':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Stark Logo.jpg")';
-            break;
-        case 'House Targaryen':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Targaryen.jpg")';
-            break;    
-        case 'House Greyjoy':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Greyjoy.jpg")';
-            break;
-        case 'House Tarly':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Tarly.jpeg")';
-            break;
-        case 'House Baratheon':
-            document.body.style.backgroundImage = 'url("assets/House Logos/Baratheon.webp")';
-            break;
-        case 'House Lannister':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
-            break;
-        case 'House Lanister':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
-            break;
-        case 'House Clegane':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Clegane.jpeg")';
-            break;
-        case 'House Baelish':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Baelish.jpeg")';
-            break;
-        case 'House Seaworth':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Seaworth.jpeg")';
-            break;
-        case 'House Tyrell':
-            document.body.style.backgroundImage = 'url("assets/House Logos/House Tyrell.jpg")';
-            break;
-        default:
-            document.body.style.backgroundImage = 'url("assets/House Logos/ETC Family.jpg")';
-    }
-    });
+  // Display filtered characters in results container
+  displayCharacters(filteredCharacters);
+ 
+  switch (selectedFamily) {
+    case 'House Stark':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Stark Logo.jpg")';
+        break;
+    case 'House Targaryen':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Targaryen.jpg")';
+        break;    
+    case 'House Greyjoy':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Greyjoy.jpg")';
+        break;
+    case 'House Tarly':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Tarly.jpeg")';
+        break;
+    case 'House Baratheon':
+        document.body.style.backgroundImage = 'url("assets/House Logos/Baratheon.webp")';
+        break;
+    case 'House Lannister':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
+        break;
+    case 'House Lanister':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Lannister.jpg")';
+        break;
+    case 'House Clegane':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Clegane.jpeg")';
+        break;
+    case 'House Baelish':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Baelish.jpeg")';
+        break;
+    case 'House Seaworth':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Seaworth.jpeg")';
+        break;
+    case 'House Tyrell':
+        document.body.style.backgroundImage = 'url("assets/House Logos/House Tyrell.jpg")';
+        break;
+    default:
+        document.body.style.backgroundImage = 'url("assets/background.jpg")';
+}
+});
 
 // Function to display characters in results container with additional information
 function displayCharacters(characters) {
@@ -147,36 +147,5 @@ document.getElementById('search-button').addEventListener('click', function() {
 })
   }) 
 
-  // Event listener for search input of specific families
 
-
-let gotCHar = []; // This will hold the fetched data
-
-// Fetch the data from db.json (adjust the path as necessary)
-fetch('https://json-server-scmh.onrender.com/gotChar')
-  .then(response => response.json())
-  .then(data => {
-    familys = data; // Assuming the data is an array of family members
-  });
-
-document.getElementById('search-family').addEventListener('input', function() {
-  const searchInput = this.value.toLowerCase();
-  const filteredFamilyMembers = familys.filter(member => 
-    member.family.toLowerCase().includes(searchInput)
-  );
-  displayFamilyMembers(filteredFamilyMembers);
-});
-
-function displayFamilyMembers(members) {
-  const container = document.getElementById('results-container');
-  container.innerHTML = ''; // Clear previous results
-
-  members.forEach(member => {
-    const memberElement = document.createElement('div');
-    memberElement.textContent = `${member.name} from ${member.family}`;
-    container.appendChild(memberElement);
-  });
-}
-
-
-
+  

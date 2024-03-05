@@ -18,15 +18,15 @@ User is able to filter Game of Thrones character by family house, gives user lis
 * Individual character look-up with character details
 
 ## Stretch Deliverables
-* User is able to select through GoT soundtracks
-* User can select through families via keydown event to move through different families without having to use dropdown.
+* User is able to select through GoT soundtrack
+* User can select through characters via keydown event to move through different characters without having to use search-bar.
 * User is able to view best quotes from each character.
 * User is able to customize site background to _great house_ logos
 
 ## Event Listeners
 > These are 3 of the event listeners in use.
 * 'change' - When the 'change' event is triggered, an anonymous function is executed. Inside this function, this refers to the select element that triggered the event
-* 'click' - 
+* 'click' - When 'click' event is triggered the user can either trigger it by clicking "More Info" to display more info on character card or by clicking "Find Character" to find specific character.
 * 'input'
 
 ## Array Iteration
