@@ -155,16 +155,16 @@ document.getElementById('search-bar').addEventListener('keydown', function(event
   });
   document.addEventListener('DOMContentLoaded', function () {
     // finds the audio player and source elements
-    var audioPlayer = document.getElementById('audioPlayer');
-    var audioSource = audioPlayer.querySelector('source');
+    const audioPlayer = document.getElementById('audioPlayer');
+    const audioSource = audioPlayer.querySelector('source');
   
     // finds the audio drop down
-    var audioSelect = document.getElementById('audio-select');
+    const audioSelect = document.getElementById('audio-select');
   
     // added event listener to dropdown change
     audioSelect.addEventListener('change', function () {
         // stores drop down value
-        var selectedAudio = audioSelect.value;
+        const selectedAudio = audioSelect.value;
   
         // update audio source with dropdown value
         audioSource.src = selectedAudio;
